@@ -1,0 +1,60 @@
+html{
+    background-image: url("https://www.crushpixel.com/big-static13/preview4/people-writing-something-white-notebook-1115705.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* se adapta a la pantalla, no importa el tamaño*/
+    background-attachment: fixed; /*Así puedo scrollear y la imagen se queda fija*/
+    color: rgba(252, 252, 252, 0.801);    
+    font-weight: bold;
+    
+}
+#title{
+    background-color: rgba(27, 27, 50, 0.6);
+    margin-left: 40%;
+    margin-top: 35px;
+    width: fit-content;
+}
+form {
+    background-color: rgba(27, 27, 50, 0.5); /* los primeros 3 van de 0 a 255 de rojo verde y azul,  Y EL CUARTO ES OPACIDAD*/
+    padding-top: 2%;
+    padding-bottom: 10%;
+    padding-right: 7%;   
+     /*padding es distancia a los bordes*/
+    border-radius: 0.8rem;
+    width: 500px;
+    height: auto;
+    margin-left: 450px;
+    }
+li{
+    padding-left: 30%;
+}
+.p{
+    padding-left: 30%;
+    text-align: left;
+}
+
+
+  /*aca pongo como se ve el texto cuando ponés un valor válido o inválido*/
+input:invalid{
+    color:red;
+    background-color: black;
+}
+input:valid{
+    color:green;
+    background-color: white;
+}
+
+#number-label{
+    width: 165px;
+        
+}
+#pasos{
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    opacity: 0.75;
+    margin-left: 20%;
+    width:fit-content;
+    background-color: rgba(27, 27, 50, 0.5);
+    
+    
+}

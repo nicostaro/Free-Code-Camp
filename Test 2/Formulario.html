@@ -1,0 +1,51 @@
+<html>
+    <link href="C:\Users\Nicolas\Desktop\Free Code Camp\HTML y CSS Clases\HTML y CSS Prueba\Test 2\Formulario.css"
+      rel="stylesheet" type="text/css">
+    
+    <head>
+        <title >SURVEY</title>
+        <h1 id="title">SURVEY TEST 2</h1>
+        
+        <body>
+            <p id="pasos">COMPLETE THE FOLLOWING SURVEY WITHOUT LEAVING BLANK SPACES</p>
+            <form id="survey-form"> <!-- el form define formalmente un formulario-->
+               
+                <br><br> 
+                <li><label for="name-label">Name: </label>
+                <input type="text" id="name-label" name="name-label" placeholder="Write your name please" required>  <!-- entiendo que el for es para que se pueda vincular bien a la etiqueta con el input-->
+                </li><br><br><br>
+                <li>
+                <label for="email-label">Mail: </label>
+                <input type="email" id="email-label" name="email-label" placeholder="Write your email please" required>
+                </li><br><br><br>
+                <li>
+                <label for="number-label">Age: </label>
+                <input type="number" id="number-label" name="age-label" min="18" max="100" placeholder="You must be 18 or older" required>
+                </li><br><br><br>
+                <li>
+                <label for="date-birth">Date of Birth: </label>
+                <input type="date" id="date-birth" name="date-birth" required> <!-- required es para obligatorio-->
+                </li><br><br>
+                
+                <p class="p">If you are going to learn to code. Do you prefer</p>
+                <li>
+                <label for="dropdown">Free/Pay: </label>
+                 <select name="dropdown" id="dropdown" required> <!-- esto hace lista desplegable-->
+                    <option disabled selected value>Select</option>
+                    <option vale="free">Free</option>
+                    <option vale="free">Pay</option>
+                 </select>
+                </li>
+
+
+            </form>
+
+
+
+
+
+
+        </body>
+
+    </head>
+</html>
