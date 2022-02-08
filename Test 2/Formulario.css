@@ -1,5 +1,5 @@
 html{
-    background-image: url("https://www.crushpixel.com/big-static13/preview4/people-writing-something-white-notebook-1115705.jpg");
+    background-image: url("https://image.freepik.com/free-photo/person-writing-notebook-table_23-2148210378.jpg");
     background-repeat: no-repeat;
     background-size: cover; /* se adapta a la pantalla, no importa el tamaño*/
     background-attachment: fixed; /*Así puedo scrollear y la imagen se queda fija*/
@@ -43,11 +43,11 @@ input:valid{
     background-color: white;
 }
 
-#number-label{
+#number{
     width: 165px;
         
 }
-#pasos{
+#description{
     font-size: 25px;
     text-align: center;
     color: white;
@@ -57,4 +57,22 @@ input:valid{
     background-color: rgba(27, 27, 50, 0.5);
     
     
+}
+
+.radioboton, .checkbox{
+    margin-left: 30%;    
+}
+#textarea{
+    margin-left: 30%;    
+    width: 300px;
+    height: 100px;
+}
+
+
+#submit{
+    margin-left: 50%;
+    width: 100px;
+    height: 30px;    
+    color: black;
+    background-color: rgb(218, 212, 212);
 }

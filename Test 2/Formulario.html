@@ -5,22 +5,22 @@
     <head>
         <title >SURVEY</title>
         <h1 id="title">SURVEY TEST 2</h1>
-        
+    </head>
         <body>
-            <p id="pasos">COMPLETE THE FOLLOWING SURVEY WITHOUT LEAVING BLANK SPACES</p>
+            <p id="description">COMPLETE THE FOLLOWING SURVEY WITHOUT LEAVING BLANK SPACES</p>
             <form id="survey-form"> <!-- el form define formalmente un formulario-->
                
                 <br><br> 
-                <li><label for="name-label">Name: </label>
-                <input type="text" id="name-label" name="name-label" placeholder="Write your name please" required>  <!-- entiendo que el for es para que se pueda vincular bien a la etiqueta con el input-->
+                <li><label id="name-label" for="name">Name: </label>
+                <input type="text" id="name" name="name" placeholder="Write your name please" required>  <!-- entiendo que el for es para que se pueda vincular bien a la etiqueta con el input-->
                 </li><br><br><br>
                 <li>
-                <label for="email-label">Mail: </label>
-                <input type="email" id="email-label" name="email-label" placeholder="Write your email please" required>
+                <label id="email-label" for="email">Mail: </label>
+                <input type="email" id="email" name="email" placeholder="Write your email please" required>
                 </li><br><br><br>
                 <li>
-                <label for="number-label">Age: </label>
-                <input type="number" id="number-label" name="age-label" min="18" max="100" placeholder="You must be 18 or older" required>
+                <label id="number-label" for="number">Age: </label>
+                <input type="number" id="number" name="age" min="18" max="100" placeholder="You must be 18 or older" required>
                 </li><br><br><br>
                 <li>
                 <label for="date-birth">Date of Birth: </label>
@@ -37,6 +37,36 @@
                  </select>
                 </li>
 
+                <p class="p">What type of programming do you prefer?</p>
+                  <input type="radio" class="radioboton" name="radio1" value="Back-End"> <!-- este es el boton nomás-->
+                  <label for="Back-End" class="radio">Back-End</label><br> <!-- Este es el texto que se ve al lado-->
+                  <input type="radio" class="radioboton" name="radio1" value="Front-End"> <!-- este es el boton nomás-->
+                  <label for="Front-End" class="radio">Front-End</label><br> <!-- Este es el texto que se ve al lado-->
+                  <input type="radio" class="radioboton" name="radio1" value="FullStack"> <!-- este es el boton nomás-->
+                  <label for="FullStack" class="radio">FullStack</label><br> <!-- Este es el texto que se ve al lado-->
+
+                  <p class="p">What day/s could you study?</p>
+                  <input type="checkbox" class="checkbox" name="check1" value="Sunday"> 
+                  <label for="Sunday">Sunday</label><br> 
+                  <input type="checkbox" class="checkbox" name="check1" value="Monday"> 
+                  <label for="Monday">Monday</label><br> 
+                  <input type="checkbox" class="checkbox" name="check1" value="Tuesday"> 
+                  <label for="Tuesday">Tuesday</label><br> 
+                  <input type="checkbox" class="checkbox" name="check1" value="Wednesday"> 
+                  <label for="Wednesday">Wednesday</label><br> 
+                  <input type="checkbox" class="checkbox" name="check1" value="Thursday"> 
+                  <label for="Thursday">Thursday</label><br> 
+                  <input type="checkbox" class="checkbox" name="check1" value="Friday"> 
+                  <label for="Friday">Friday</label><br> 
+                  <input type="checkbox" class="checkbox" name="check1" value="Saturday"> 
+                  <label for="Saturday">Satruday</label><br> <br><br>
+
+                    <p class="p">Please write anything you want to add</p>
+                    <textarea id="textarea"></textarea><br><br><br><br>
+                  
+             
+                <input type="submit" id="submit" name="submit" value="Submit"> <!--value es lo que dice el botón-->
+
 
             </form>
 
@@ -47,5 +77,4 @@
 
         </body>
 
-    </head>
 </html>
