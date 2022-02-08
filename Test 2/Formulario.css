@@ -5,25 +5,32 @@ html{
     background-attachment: fixed; /*Así puedo scrollear y la imagen se queda fija*/
     color: rgba(252, 252, 252, 0.801);    
     font-weight: bold;
+   
     
 }
 #title{
     background-color: rgba(27, 27, 50, 0.6);
-    margin-left: 40%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 35px;
     width: fit-content;
+    text-align: center;
 }
 form {
     background-color: rgba(27, 27, 50, 0.5); /* los primeros 3 van de 0 a 255 de rojo verde y azul,  Y EL CUARTO ES OPACIDAD*/
     padding-top: 2%;
     padding-bottom: 10%;
-    padding-right: 7%;   
+    padding-right: 10%;   
      /*padding es distancia a los bordes*/
     border-radius: 0.8rem;
     width: 500px;
     height: auto;
-    margin-left: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    
     }
+
+
 li{
     padding-left: 30%;
 }
@@ -52,7 +59,8 @@ input:valid{
     text-align: center;
     color: white;
     opacity: 0.75;
-    margin-left: 20%;
+    margin-left: auto;
+    margin-right: auto;
     width:fit-content;
     background-color: rgba(27, 27, 50, 0.5);
     
@@ -75,4 +83,43 @@ input:valid{
     height: 30px;    
     color: black;
     background-color: rgb(218, 212, 212);
+}
+
+/*Aca lo que hace es cambiar el formato para pantallas menor o igual a 1000px, o sea, celulares */
+@media(max-width: 1000px){
+    form {
+        padding-top: 0%;
+        padding-bottom: 0%;
+        padding-right: 0%;
+      padding-right: 0%;
+      
+         /*padding es distancia a los bordes*/
+        
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+   li{
+        padding-left: 0%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .p{
+        padding-left: 0%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+  
+  #textarea{
+    width: 70vw;
+    margin-left: 10%;    
+  }
+  .radioboton, .checkbox{
+    margin-left: 10%; }
+
+    #submit{
+   margin-left: 40vw;}
+
 }
