@@ -1,0 +1,82 @@
+html{
+    background-image: url("https://lamiabiocosmetica.com/wp-content/uploads/fondo-pagina-contacto-01.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+     
+}
+#header{
+    
+}
+#title{
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: 50px;
+    }
+#form{
+    position:absolute ;   
+    width: 100%;
+    text-align: center;
+    top: 100px;
+            
+    }
+#header-img{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 0;
+    left: 0;
+    filter: brightness(1.4);
+    mix-blend-mode: multiply;  /*con filter y mix belnd así, le saca el fondo blanco a la imagen :)*/    
+}
+#nav-bar{
+    position: fixed;
+    top:0px;
+    right:0%; /*así se me queda a la derecha de todo*/
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: end; /*me los lleva a la derecha de todo*/
+    }
+.nav-l{
+    border: 1px solid black;
+    border-radius: 5%;
+    margin: 15px;
+    height: fit-content;
+} 
+
+#email{
+    width: 210px;      
+    
+}
+#submit{
+       
+}
+#first-li{
+    margin-top: 100px;
+    
+}
+li{
+    margin-top: 50px;
+    text-decoration: underline;
+}
+.h2-p{
+    font-size: 20px;
+    margin-top: 40px;
+}
+.img-p{
+    filter: brightness(1.4);
+    mix-blend-mode: multiply;  /*con filter y mix belnd así, le saca el fondo blanco a la imagen :)*/
+    height: 125px;
+    width: 125px;
+    position: relative;
+    top: 50px;
+    
+}
+#p-video{
+    text-align: center;
+    font-weight: bold;
+}
+#video{
+    text-align: center;
+}
+/*se que están vacías, pero hasta terminar las dejo así, para que estén ordenadas en caso de querer llenarlas*/
