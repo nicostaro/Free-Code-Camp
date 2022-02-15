@@ -3,9 +3,7 @@ html{
     font-family: Arial, Helvetica, sans-serif;
      
 }
-#header{
-    
-}
+
 #title{
     text-align: center;
     font-size: 30px;
@@ -31,11 +29,13 @@ html{
 #nav-bar{
     position: fixed;
     top:0px;
-    right:0%; /*así se me queda a la derecha de todo*/
+    
     height: 50px;
     width: 100%;
     display: flex;
     justify-content: end; /*me los lleva a la derecha de todo*/
+    
+    
     }
 .nav-l{
     border: 1px solid black;
@@ -48,9 +48,7 @@ html{
     width: 210px;      
     
 }
-#submit{
-       
-}
+
 #first-li{
     margin-top: 100px;
     
@@ -79,4 +77,37 @@ li{
 #video{
     text-align: center;
 }
+footer{
+    text-align: end;
+    
+}
+
+@media(max-width: 1000px){
+    #title{
+        font-size: 20px;
+    }
+    #nav-bar{
+    padding-left:15vw;
+    }            
+    .nav-l{  
+        font-size: 1.7vh;
+       text-align: center;
+       margin-inline-end: 0%;
+    }
+    li{
+        margin-top:30px;
+        font-size: 15px;
+    }
+    .h2-p{
+        font-size: 12px;
+        margin-top:20px;
+    }
+    .img-p{
+        height: 30px;
+        width: 30px;
+        top: 5px;
+    }
+}
+
+
 /*se que están vacías, pero hasta terminar las dejo así, para que estén ordenadas en caso de querer llenarlas*/
