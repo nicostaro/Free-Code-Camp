@@ -1,0 +1,53 @@
+
+#navbar{
+    position: fixed;
+    height: 100%;
+    background-color: rgb(52, 52, 245);
+    min-width: 200px;
+    max-width: 200px;
+    border-right: 3px solid red;
+    top:0;
+    left: 0;
+    padding-left: 5px;
+    padding-top: 5px;
+    
+}
+#nav-header{
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 6px double red;
+    text-align: center;
+}
+.nav-div{
+    margin: 40px 0 0 20px;   
+    
+}
+
+
+a {
+    text-transform: none;
+        
+}
+/* el visited es pseudoclase, que da formato al link del "a" después de que fue visitado/clickeado*/
+a:visited{  
+    color: rgb(0, 0, 0)
+}
+a:hover{
+    font-size: large;
+    background: linear-gradient(transparent,transparent,black); /*así me queda 2/3 transparente (también se puede con %)*/
+    
+   
+} /*el hover es para cuando pasas por arriba, o en los celulares, cuando los clickeas*/
+
+.nav-img{
+    height: 150px;
+    margin: 100px 0 0 20px;
+    
+    
+}
+
+main{
+    margin-left: 250px;
+    
+}
