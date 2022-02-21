@@ -1,4 +1,5 @@
 
+
 #navbar{
     position: fixed;
     height: 100%;
@@ -30,10 +31,13 @@ a {
         
 }
 /* el visited es pseudoclase, que da formato al link del "a" después de que fue visitado/clickeado*/
-a:visited{  
+.nav-link:visited{  
     color: rgb(0, 0, 0)
-}
-a:hover{
+    }
+.nav-link:link{  
+        color: rgb(0, 0, 0)
+    }
+.nav-link:hover{
     font-size: large;
     background: linear-gradient(transparent,transparent,black); /*así me queda 2/3 transparente (también se puede con %)*/
     
@@ -47,7 +51,172 @@ a:hover{
     
 }
 
-main{
+main{ 
     margin-left: 250px;
     
+    
+    
+}
+
+.main-section header{  /*esto es para que solo los header de la main-section y no TODO, inclusive los p y demás*/
+    text-decoration: underline;
+    font-size: larger;
+}
+
+footer{ 
+    margin-left: 250px;
+    
+    
+}
+
+@media ( min-width: 700px) and (max-width: 800px){ /*la tablet es de 768, así que de tablet y celu se vería como lo siguiente*/
+    #navbar{
+        position:fixed;        
+        max-width: 800px;
+        height: 60px;
+        width: 100%;
+        background-color: rgb(52, 52, 245);
+        border-right: 0px;
+        border-bottom: 0px solid red;
+        padding: 10px;
+        
+      
+    }
+
+    #nav-header{
+        margin: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 6px double red;
+        text-align: center;
+        display:block;
+        width: 100vw;
+        position: absolute;
+    }
+    .nav-div{
+        margin: 40px 5px 0px 5px;  
+        padding: 5px;
+        display: inline-block; /*así está uno al lado del otro*/
+        
+        
+    }
+       
+    .nav-img{
+        visibility: hidden;
+        
+        
+    }
+    
+    main{ 
+        margin-left: 10px;
+        margin-top: 100px;      
+        
+        
+    }
+    footer{ 
+        margin-left: 0px;
+}
+}
+
+@media ( min-width: 450px) and (max-width: 700px) {
+    #navbar{
+        position:fixed;        
+        max-width: 700px;
+        height: 60px;
+        width: 100%;
+        background-color: rgb(52, 52, 245);
+        border-right: 0px;
+        border-bottom: 0px solid red;
+        padding: 10px;
+        
+      
+    }
+
+    #nav-header{
+        margin: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 6px double red;
+        text-align: center;
+        display:block;
+        width: 100vw;
+        position: absolute;
+    }
+    .nav-div{
+        margin: 40px 0px 0px 0px;  
+        padding: 0px;
+        display: inline-block; /*así está uno al lado del otro*/
+        font-size: 12px;
+        
+        
+        
+    }
+       
+    .nav-img{
+        visibility: hidden;
+        
+        
+    }
+    
+    main{ 
+        margin-left: 10px;
+        margin-top: 100px;      
+        
+        
+    }
+
+    footer{ 
+        margin-left: 0px;
+}
+}
+@media (max-width: 450px) {
+    #navbar{
+        position:fixed;        
+        max-width: 700px;
+        height: 60px;
+        width: 100%;
+        background-color: rgb(52, 52, 245);
+        border-right: 0px;
+        border-bottom: 0px solid red;
+        padding: 10px;
+        
+      
+    }
+
+    #nav-header{
+        margin: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 6px double red;
+        text-align: center;
+        display:block;
+        width: 100vw;
+        position: absolute;
+    }
+    .nav-div{
+        margin: 40px 0px 0px 0px;  
+        padding: 0px;
+        display: inline-block; /*así está uno al lado del otro*/
+        font-size: 8px;
+        
+        
+        
+    }
+       
+    .nav-img{
+        visibility: hidden;
+        
+        
+    }
+    
+    main{ 
+        margin-left: 10px;
+        margin-top: 100px;      
+        
+        
+    }
+
+    footer{ 
+        margin-left: 0px;
+}
 }
