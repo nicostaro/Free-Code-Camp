@@ -1,0 +1,55 @@
+
+body{
+    margin: 0; /*igual tengo ganas de poner una imagen de fondo*/
+    
+}
+
+#navbar{
+    display: flex; /*automático como fila, están todos los div (hijos) en el mismo renglón*/
+    justify-content: flex-end;   
+    height: 40px;
+    width: 100%;
+    background-color: #F69245;
+    position:fixed;
+      
+    
+}
+
+.nav-div{    
+    width: 130px;
+    justify-content: center;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    
+        
+}
+
+.nav-div :link{
+    color: rgba(0, 0, 0, 0.918);
+    
+    
+    
+}
+.nav-div :visited{
+    color: rgba(0, 0, 0, 0.918);
+    
+}
+.nav-div :hover{
+    height: 100%;
+    background-color: #ce7832;
+    display: flex;  /*no se porque repito esto en el hover, pero si no, no me dejaba*/
+    align-items: center;
+    width: 130px;
+    justify-content: center;
+    
+    
+    
+}
+
+
+#welcome-section{
+    height: 100vh;
+    padding-top: 20px;
+    
+}
