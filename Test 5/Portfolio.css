@@ -1,6 +1,10 @@
 
+
 body{
     margin: 0; /*igual tengo ganas de poner una imagen de fondo*/
+    width: 100vw;
+    
+    
     
 }
 
@@ -8,9 +12,10 @@ body{
     display: flex; /*automático como fila, están todos los div (hijos) en el mismo renglón*/
     justify-content: flex-end;   
     height: 40px;
-    width: 100%;
-    background-color: #F69245;
+    width: 100vw;
+    background-color: rgb(78, 76, 76);
     position:fixed;
+   
       
     
 }
@@ -26,23 +31,22 @@ body{
 }
 
 .nav-div :link{
-    color: rgba(0, 0, 0, 0.918);
+    color: rgba(255, 255, 255, 0.8);
     
     
     
 }
 .nav-div :visited{
-    color: rgba(0, 0, 0, 0.918);
+    color: rgba(255, 255, 255, 0.8);
     
 }
 .nav-div :hover{
     height: 100%;
-    background-color: #ce7832;
+    background-color:rgba(0,0,0,0.5);
     display: flex;  /*no se porque repito esto en el hover, pero si no, no me dejaba*/
     align-items: center;
     width: 130px;
     justify-content: center;
-    
     
     
 }
@@ -51,5 +55,276 @@ body{
 #welcome-section{
     height: 100vh;
     padding-top: 20px;
+    background: radial-gradient(circle,#fff,rgb(138, 134, 134));
+    color: rgb(56, 55, 55);
+    
     
 }
+
+#welcome-section h1{
+    text-align: center;
+    font-size: 70px;
+    margin-top: 50px;
+    
+}
+
+#welcome-section p{
+    text-align: center;
+    font-size: 70px;
+    
+    
+}
+
+#projects{ /*grid container*/
+    display: grid;
+    grid-template-rows: 150px 50vh; /*1 fila de 50px y otra de la mitad del viewport*/
+    grid-template-columns: repeat(4, 1fr)  ; /*si ponés REPEAT, se separa del otro con coma, si no, no, como en el caso de las filas*/ /*1Ffr se achican y agrandan lo mismo*/
+    background: radial-gradient(circle,#fff,rgb(138, 134, 134));
+    border: 3px solid rgb(124, 123, 123);
+    column-gap: 20px; /*separación entre celdas (en este caso columnas), NO DE LOS BORDES*/
+    padding: 0 5px 5px 5px;
+    text-align: center;
+    
+     
+}
+
+.grid-item{
+    border: 1px solid rgb(124, 123, 123);
+    font-weight: bold;
+    font-size: 30px;
+    
+    
+}
+
+.grid-item:first-child{
+    
+    grid-column: 1/5;
+    align-self: center;
+    padding:40px 40px;
+    font-size: 30px;
+    
+    
+}
+.grid-item:nth-child(2){ /*elemento 2 del grid*/
+    border: 2px solid rgb(124, 123, 123);
+    height: 225px;
+    
+    
+}
+
+.grid-item:nth-child(3){ /*elemento 3 del grid*/
+    border: 2px solid rgb(124, 123, 123);
+    height: 225px;  
+    
+}
+
+
+.grid-item:nth-child(4){ /*elemento 4 del grid*/
+    border: 2px solid rgb(124, 123, 123);
+    height: 225px;  
+    
+}
+
+.grid-item:nth-child(5){ /*elemento 5 del grid*/
+    border: 2px solid rgb(124, 123, 123);
+    height: 225px;  
+    
+}
+
+.grid-item :link{
+    color: rgba(0, 0, 0, 1);
+}
+.grid-item :visited{
+    color: rgba(0, 0, 0, 1);
+} 
+
+
+footer{
+    width: 100vw;
+    height: 100px;
+    background: radial-gradient(circle,#fff,rgb(138, 134, 134));
+    margin-top: 0;
+    
+
+}
+footer div{
+    text-align: end;
+    margin-right: 10px;
+}
+
+#profile-link:link{
+    color:#000;
+}
+
+#profile-link:visited{
+    color:#000;
+}
+
+@media (max-width: 600px){
+ 
+    #welcome-section h1, #welcome-section p{
+      font-size: 40px;
+   }
+      
+    
+    #projects{ /*grid container*/
+          justify-items: center;
+          align-items: center;
+          grid-template-rows: 150px 1fr 1fr ; /*1 fila de 50px y otra de la mitad del viewport*/
+          grid-template-columns: 1fr 1fr
+          
+           
+      }
+      .grid-item{
+         
+          font-size: 20px;
+          
+      }
+      .grid-item:first-child{
+      
+          grid-column: 1/3;
+          align-self: center;
+          padding:20px 20px;
+          font-size: 30px;
+      }
+      .grid-item:nth-child(2){ /*elemento 2 del grid*/
+              border: 2px solid #000;
+              height: 100%;
+              width:200px;           
+              
+      }
+          
+      .grid-item:nth-child(3){ /*elemento 3 del grid*/
+             
+              height: 100%;  
+              width:200px;
+              
+      }
+          
+          
+      .grid-item:nth-child(4){ /*elemento 4 del grid*/
+              
+              height: 100%; 
+              width:200px;
+              
+      }
+          
+      .grid-item:nth-child(5){ /*elemento 5 del grid*/
+              
+              height: 100%; 
+              width:200px;
+              
+      }
+  }
+@media (max-width: 400px){
+   
+    #welcome-section h1, #welcome-section p{
+      font-size: 40px;
+   }
+      
+    
+    #projects{ /*grid container*/
+          justify-items: center;
+          align-items: center;
+          grid-template-rows: 150px 1fr 1fr ; /*1 fila de 50px y otra de la mitad del viewport*/
+          grid-template-columns: 1fr 1fr
+          
+           
+      }
+      .grid-item{
+         
+          font-size: 20px;
+          
+      }
+      .grid-item:first-child{
+      
+          grid-column: 1/3;
+          align-self: center;
+          padding:20px 20px;
+          font-size: 30px;
+      }
+      .grid-item:nth-child(2){ /*elemento 2 del grid*/
+              border: 2px solid #000;
+              height: 100%;
+              width:200px;           
+              
+      }
+          
+      .grid-item:nth-child(3){ /*elemento 3 del grid*/
+             
+              height: 100%;  
+              width:200px;
+              
+      }
+          
+          
+      .grid-item:nth-child(4){ /*elemento 4 del grid*/
+              
+              height: 100%; 
+              width:200px;
+              
+      }
+          
+      .grid-item:nth-child(5){ /*elemento 5 del grid*/
+              
+              height: 100%; 
+              width:200px;
+              
+      }
+  }
+@media (orientation:landscape) and (max-width: 700px){
+   
+    #welcome-section h1, #welcome-section p{
+      font-size: 40px;
+   }
+      
+    
+    #projects{ /*grid container*/
+          justify-items: center;
+          align-items: center;
+          grid-template-rows: 150px 1fr 1fr ; /*1 fila de 50px y otra de la mitad del viewport*/
+          grid-template-columns: 1fr 1fr
+          
+           
+      }
+      .grid-item{
+         
+          font-size: 20px;
+          
+      }
+      .grid-item:first-child{
+      
+          grid-column: 1/3;
+          align-self: center;
+          padding:20px 20px;
+          font-size: 30px;
+      }
+      .grid-item:nth-child(2){ /*elemento 2 del grid*/
+              border: 2px solid #000;
+              height: 100%;
+              width:200px;           
+              
+      }
+          
+      .grid-item:nth-child(3){ /*elemento 3 del grid*/
+             
+              height: 100%;  
+              width:200px;
+              
+      }
+          
+          
+      .grid-item:nth-child(4){ /*elemento 4 del grid*/
+              
+              height: 100%; 
+              width:200px;
+              
+      }
+          
+      .grid-item:nth-child(5){ /*elemento 5 del grid*/
+              
+              height: 100%; 
+              width:200px;
+              
+      }
+  }
