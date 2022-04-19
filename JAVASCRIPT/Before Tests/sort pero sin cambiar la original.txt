@@ -1,0 +1,11 @@
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+  let newArr=[...arr]; //creo una nueva sin modificar la vieja
+  newArr.sort(function(a,b){
+    return a-b;
+  })
+  return newArr;
+}
+
+console.log(nonMutatingSort(globalArray));

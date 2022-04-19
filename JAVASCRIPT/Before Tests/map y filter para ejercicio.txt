@@ -1,0 +1,10 @@
+const squareList = arr => {
+  let first=arr.filter(x=> x>=0); //acá dejo sólo los positivos
+  let second = first.filter(x=> x==Math.floor(x)); // acá dejo sólo los enteros
+  let final = second.map(x=> x*x); //acá los hace al cuadrado
+  return final;
+
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);

@@ -1,0 +1,11 @@
+// Only change code below this line
+function urlSlug(title) {
+  return title.toLowerCase().trim().split(/\s+/).join("-");//acá paso todo a minúsucla y con el trim() le saco los espacios sobrantes del principio y final
+//split me las convierte en un array sacando los espacios y guiones y join vuelve a ponerme en un string separado por guiones
+  
+
+}
+// Only change code above this line
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"); 
+console.log(urlSlug(" Winter Is  Coming"))
+console.log("winter-is-coming")

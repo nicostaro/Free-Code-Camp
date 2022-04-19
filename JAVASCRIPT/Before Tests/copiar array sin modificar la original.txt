@@ -1,0 +1,31 @@
+// The global variable
+const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+// Change code below this line
+function add(arr,bookName) {
+  let book=arr.slice(0);
+  book.push(bookName);
+  return book;
+  
+  // Change code above this line
+}
+
+// Change code below this line
+function remove(arr,bookName) {
+  const book_index = arr.indexOf(bookName);
+  
+  if (book_index >= 0) {
+    let book2=[...arr];
+    book2.splice(book_index, 1);
+    return book2;
+
+    // Change code above this line
+    }
+}
+
+console.log(remove(bookList, "On The Electrodynamics of Moving Bodies"))
+
+/* Si vos pones arr1=arr0, cuando cambies arr1 SE CAMBIA arr0.
+Por lo que tenés que copiar un array de manera que al cambiarla, 
+no se cambie la otra. En cada función dejé un ejemplo.
+En la primera es con SLICE, y en la segunda es con [...arr]*/

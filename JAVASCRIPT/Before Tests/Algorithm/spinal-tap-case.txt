@@ -1,0 +1,10 @@
+function spinalCase(str) {
+  return str.replace(/([a-z])([A-Z])/g, "$1 $2").toLowerCase().trim().split(/\s+|_+/g).join("-")
+  
+}
+
+console.log(spinalCase('thisIsSpinalTap'));
+/*replace(/([a-z])([A-Z])/g, "$1 $2") me separa las palabras unidas con mayúsuclas y minúsculas elCarro = el Carro
+.toLowerCase().trim() las paso a minúsculas y saco espacios sobrantes
+split(/\s+|_+/g) hago un array separando por espacios y  guiones join vuelve a ponerme en un string separado por guiones
+ */

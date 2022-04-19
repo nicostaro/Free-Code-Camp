@@ -1,0 +1,45 @@
+function pairElement(str) {
+  let one = str.split("");
+  let two = [];
+  
+  for (let i =0; i<one.length;i++){
+    two.push([one[i]]);
+  }
+  for (let j=0; j<two.length;j++){
+    if (two[j][0]=="C"){
+      two[j][1]="G";
+    }
+   else if (two[j][0]=="G"){
+      two[j][1]="C";
+  }
+  else if (two[j][0]=="T"){
+      two[j][1]="A";
+  }
+  else if (two[j][0]=="A"){
+      two[j][1]="T";
+  }
+ }return two;
+}
+
+console.log(pairElement("GCG"));
+
+/* Consigna:
+ Un string que sólo sea con las letras (G,C,T,A)
+ me tiene que devolver un array de arrays que empareje G con C y T con A 
+ Por ejemplo: pairElement("ATCGA") should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]] */
+
+
+/*Otra posibilidad con map()
+function pairElement(str) {
+  //create object for pair lookup
+  var pairs = {
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C"
+  };
+  //split string into array of characters
+  var arr = str.split("");
+  //map character to array of character and matching pair
+  return arr.map(x => [x, pairs[x]]);
+}*/

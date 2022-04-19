@@ -1,0 +1,16 @@
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
+let result = userCheck.test(username);
+console.log(result);
+
+/*
+^ - start of input. Si estuviera dentro del corchete, sería para decía encontrá todo salvo letras entre a y z.
+[a-z] - Empieza con una letra
+[a-z]+ - el siguiente es una letra y cómo tiene el "+" puede ser la cantidad de letras que sea (1 o más)
+\d*$ - "\d" dice que sea un número entre el 0 y 9. El asterísco me dice que puede estar 0 o más veces. El $ es que esté al final de todo
+| - o
+^[a-z] - first character is a letter
+\d\d+ - following characters are 2 or more digits
+$ - end of input
+i es para decir que sean mayúscula o mínuscula, o sea, indistinto.
+*/

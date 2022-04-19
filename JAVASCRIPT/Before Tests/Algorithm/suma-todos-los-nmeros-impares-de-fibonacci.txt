@@ -1,0 +1,17 @@
+function sumFibs(num) {
+  let fibo0 = 0;
+  let fibo1 = 1;
+  let sum=0;
+  while (fibo1<=num){
+    if(fibo1%2!==0){
+      sum = sum + fibo1
+    }
+    fibo1= fibo0 + fibo1
+    fibo0 = fibo1 - fibo0
+    
+  }
+  
+  return sum;
+}
+
+console.log(sumFibs(75025));

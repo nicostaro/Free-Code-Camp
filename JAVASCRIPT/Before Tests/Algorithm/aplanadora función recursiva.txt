@@ -1,0 +1,31 @@
+//Consigna: aplanar la función si usar .flat()
+function steamrollArray(arr) {
+  let arr2=[];
+  for (let i=0;i<arr.length;i++){
+    if (!Array.isArray(arr[i])){
+      arr2.push(arr[i])
+    } 
+    else {
+     arr2.push(...steamrollArray(arr[i]))};
+      /*acá se ponen los ... porque si no los ponés, el resultado es un array, por lo que push no iría, y habría que poner arr2=arr2.concat(steamrollArray(arr[i])). Básicamente lo mismo */
+      
+  }
+  return arr2;
+}
+
+console.log(steamrollArray([[1], 2, [3, [[4]]]]));
+console.log(steamrollArray([[["a"]], [["b"]]]));
+
+/*function steamrollArray(arr) {
+
+  var steamrolled = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      var subArray = steamrollArray(arr[i]);
+      steamrolled = steamrolled.concat(subArray);
+    } else {
+      steamrolled.push(arr[i]);
+    }
+  }
+  return steamrolled;
+} */

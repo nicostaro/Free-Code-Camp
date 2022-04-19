@@ -1,0 +1,13 @@
+function destroyer(arr) {
+  let arr2=[...arguments];
+  
+  //al hacer esto, estoy poniendo en un array todos los argumentos que alguien vaya a poner. Por ejemplo destroyer([1, 2, 3, 1, 2, 8], 2, 3) va a hacer que arr2[0]=[1, 2, 3, 1, 2, 3], arr[1]=2,arr[2]=8. Y así ponga los argumentos que ponga
+  return arr.filter(elem => !arr2.includes(elem)) //elemntos no incluidos en arr2
+  }
+  
+
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+
+

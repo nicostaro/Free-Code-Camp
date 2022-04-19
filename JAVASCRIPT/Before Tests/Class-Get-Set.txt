@@ -1,0 +1,25 @@
+/* Aca creo una clase Thermostat (mayusculas primieras letras)
+ abajo se crea un objeto "thermos" con temperatura 76 F*/
+class Thermostat{
+  constructor(farenheit){
+    this._farenheit=farenheit;
+  }
+/*con este get directamente hago un transformador de temperatura
+abajo se creo una let "temp" que te la convierte en Celsius */
+ get temperature(){
+   return 5/9* (this._farenheit-32);
+ }
+ /*con este set hago que se puede cambiar la temperatura en celsius y además la convierta a farenheit*/
+ set temperature(newCelsius){
+  this._farenheit = newCelsius*9/5 + 32;
+ } 
+}
+
+
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+console.log(thermos.temperature); //26
+console.log(thermos._farenheit); //78.8 (26 celsius)

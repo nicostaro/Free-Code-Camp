@@ -1,0 +1,14 @@
+function alphabeticalOrder(arr) {
+    return arr.sort(function(a, b) {
+    return a === b ? 0 : a < b ? -1 : 1;
+  });
+
+  // si a===b ? 0 (no cambia el orden)
+  // : ya es si es falso, o sea, si es falso y si a<b
+  // ? si es verdadero poner -1 primero (a), si es falso, poner 1 (b)
+  
+}
+
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+/*Por defecto, JavaScript ordena basándose en el valor "Unicode" de la cadena de caracteres, lo cual puede dar resultados inesperados. Por lo tanto, se recomienda proporcionar una función callback para especificar como se deben ordenar los elementos del arreglo. Cuando se proporciona dicha función callback, normalmente llamada compareFunction, los elementos del arreglo se ordenan de acuerdo al valor que devuelve la función compareFunction: Si compareFunction(a,b) devuelve un valor menor que 0 para dos elementos a y b, entonces a irá antes que b. Si compareFunction(a,b) devuelve un valor mayor a 0 para dos elementos a y b, entonces b irá antes que a. Si compareFunction(a,b) devuelve un valor igual a 0 para dos elementos a y b, entonces a y b se dejarán sin cambios.*/

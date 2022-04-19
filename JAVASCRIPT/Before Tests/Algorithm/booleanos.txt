@@ -1,0 +1,25 @@
+function truthCheck(collection, pre) {
+  let arr=[];
+  for (let i=0;i<collection.length;i++){
+    arr.push(collection[i][pre]);
+   // hago un array de la condición
+  }
+  for (let j=0;j<arr.length;j++){
+    if (arr.every(valor=> !!valor==true)){ //!! es para que te de el valor booleano
+      return true; 
+    } else {return false;}
+  }
+ 
+}
+
+console.log(truthCheck([{name: "Quincy", role: "Founder", isBot: false}, {name: "Naomi", role: "", isBot: false}, {name: "Camperbot", role: "Bot", isBot: true}], "isBot"));
+
+/*Consigna: Que todos los objetos, tengan el "pre" y no sea falso  */
+
+
+/* Solución corta
+function truthCheck(collection, pre) {
+  return collection.every(function (element) {
+    return element.hasOwnProperty(pre) && Boolean(element[pre]);
+  });
+} */

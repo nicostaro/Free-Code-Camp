@@ -1,0 +1,16 @@
+const Person = function(firstAndLast) {
+  let arr = firstAndLast.split(" ");
+  this.getFirstName = ()=> arr[0];
+  this.getLastName = ()=> arr[1];
+  this.getFullName = ()=> arr[0]+" "+arr[1];
+  this.setFirstName = (x)=> arr[0]=x;
+  this.setLastName = (x)=> arr[1]=x;
+  this.setFullName = (x)=> arr=x.split(" ");
+  
+};
+
+const bob = new Person('Bob Ross');
+console.log(bob.getFirstName());
+console.log(bob.getFullName());
+bob.setFullName("Haskell Ross");
+console.log(bob.getFullName());

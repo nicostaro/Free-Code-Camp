@@ -1,0 +1,21 @@
+function smallestCommons(arr) {
+  let newArr=[...arr]; //creo una nueva sin modificar la vieja
+  newArr.sort(function(a,b){
+    return a-b;
+  }) //newArr es la misma pero ordenada
+  let arr2=[];
+  for (let i=newArr[0];i<=newArr[1];i++){
+    arr2.push(i); //arr2 tiene todos los números
+  }
+  let last=arr2.pop(); //pongo el último número y además se lo saco a arr2. Este número lo voy a multiplicar hasta que sea divisible por todo arr2
+  
+  for (let i=1;i<50000000000;i++){
+    last=last*i
+    if(arr2.filter(x=> last%x==0).length==arr2.length){
+      return last
+    }
+    last=last/i  // pongo esto para que cuando vuelva el loop, se vuelva a el "last" incial.
+  }
+}
+
+console.log(smallestCommons([1,13]));

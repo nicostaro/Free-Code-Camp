@@ -1,0 +1,12 @@
+function chunkArrayInGroups(arr, size) {
+  let nueva=[];
+ 
+  for(let i=0; i<arr.length;i+=size){
+    nueva.push(arr.slice(i,size+i));
+  }
+  return nueva;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5,6], 2));
+///CONSIGNA: dividir el array en varios array del tamaño size

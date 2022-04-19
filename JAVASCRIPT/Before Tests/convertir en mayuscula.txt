@@ -1,0 +1,11 @@
+function titleCase(str) {
+  return str
+    .toLowerCase() ///lo hace todo minúscula
+    .split(" ")  /// lo hace un array con cada palabra 
+    .map(x => x.replace(x.charAt(0), x.charAt(0).toUpperCase())) ///el map agarra cada uno de los items del array y le pone la funcion de reemplazar el primer caracter por mayuscula. La x (puedo poner cualquier nombre) es cada item del array. El charAt te devuelve el caracter de la palabra que le digas, el 0 es el primero.
+    .join(" "); /// join es el contrario de split, te une cada item para un string
+}
+
+console.log(titleCase("I'm a little tea pot"));
+
+///CONSIGNA, poner la primera letra de cada palabra en mayúsucla.

@@ -1,0 +1,14 @@
+function findLongestWordLength(str) {
+  let palabras=str.split(" "); /*esto me divide todo el string en un array donde cada palabra es un índice. (si no hubiera dejado el espacio entre las comillas, cada letra y hasta el espacio sería un índice)*/
+  let maslarga=0;
+  for(let i=0; i<palabras.length;i++){
+    if (palabras[i].length>maslarga){
+       maslarga= palabras[i].length;
+    }
+   
+  } 
+  return maslarga;
+}
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
+/*me devuelve la palabra más larga que es jumped*/

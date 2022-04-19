@@ -1,0 +1,13 @@
+function checkPositive(arr) {
+   let a = arr.every (valor => valor>0);
+   return a}
+console.log(checkPositive([1, 2, 3, -4, 5]));
+
+// every se fija si la condicion se cumple en todos los valores
+
+
+ /*let a = arr.every(function(currentValue) {
+  return currentValue > 0;
+});
+return a
+}*/

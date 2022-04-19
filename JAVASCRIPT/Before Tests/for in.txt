@@ -1,0 +1,28 @@
+const users = {
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+/* el for in pasa por cada una de las cosas del objeto, en este caso por Alan, Jeff y Sarah.
+Donde puse usuarios, podía poner manzanas, y era lo mismo, eso es nada más para decir, para cada uno de los cosas del objeto, hace lo siguiente...
+En este caso, suma todos los que tengan online true*/
+function countOnline(usersObj) {
+  // Only change code below this line
+  let suma =0;
+  for (let usuarios in usersObj){
+    if(usersObj[usuarios].online==true){
+      suma++
+    }
+    
+  } return suma
+
+  // Only change code above this line
+}
+
+console.log(countOnline(users));

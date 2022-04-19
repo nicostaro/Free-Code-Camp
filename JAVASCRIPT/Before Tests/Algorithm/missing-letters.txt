@@ -1,0 +1,41 @@
+function fearNotLetter(str) {
+  let order ={
+    a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10,k:11,l:12,m:13,n:14,o:15,p:16,q:17,r:18,s:19,t:20,u:21,v:22,w:23,x:24,y:25,z:26
+  }
+  let arr =str.split(""); //convierto en array de letras separadas
+  let filtrar = []
+  let result;
+  for (let i=0; i<arr.length;i++){
+   if (order.hasOwnProperty(arr[i])){
+     filtrar.push(order[arr[i]]); //filtrar es ahora un array de los números a los que corresponde cada letra de arr
+   }
+  }
+  for (let i=1; i<filtrar.length;i++){
+    if (filtrar[i]-filtrar[i-1]>1){
+      result= filtrar[i]-1;  
+      //cuando da mayor a 1, significa que me comi esa letra. result va a ser el número al que corresponde esa letra
+    } 
+  } 
+    for (let letra in order){
+      if (order[letra]==result){
+        return letra;  //busco la letra a la que le corresponde el número de result
+      }
+    }
+}
+ 
+
+console.log(fearNotLetter("abce"));
+
+/*Consigna: encontrar la letra faltante del abecedario */
+
+
+
+
+/* Manera simple, cada letra tiene un código
+function fearNotLetter(str) {
+  for (let i = 1; i < str.length; ++i) {
+    if (str.charCodeAt(i) - str.charCodeAt(i - 1) > 1) {
+      return String.fromCharCode(str.charCodeAt(i - 1) + 1);
+    }
+  }
+}*/

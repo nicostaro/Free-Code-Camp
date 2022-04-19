@@ -1,0 +1,30 @@
+function dropElements(arr, func) {
+  let elem;
+  for(let i=0;i<arr.length;i++){
+    if(func(arr[i])){
+      elem =i;
+      break
+   }
+   else{elem=i+1};
+  }
+  return arr.slice(elem);
+}
+
+console.log(dropElements([1, 2, 3], function(n) {return n >= 4; }));
+
+/*
+Consigna: Dado el arreglo arr, itera y elimina cada elemento comenzando desde el primer elemento (el índice 0) hasta que la función func devuelva true cuando el elemento iterado se pasa a través de él.
+
+Luego devuelve el resto del arreglo una vez que se cumpla la condición, de lo contrario, arr debe devolverse como un arreglo vacío. 
+
+
+Más eficiente quedaría así
+function dropElements(arr, func) {
+  for (let i = 0; i < arr.length; i++)
+    if (func(arr[i])) {
+      return arr.slice(i);
+    }
+
+  return [];
+}
+*/

@@ -1,0 +1,37 @@
+function addTogether(x,y) {
+  
+  if (typeof(x)!=="number"){
+  return undefined;
+  }
+  else if (arguments[1]===undefined){
+    function addSecond(y) {
+      if(typeof(y)!=="number"){
+        return undefined;
+      }
+     else {return x + y};
+   }  return addSecond;
+  }
+  else if (typeof(y)!=="number"){
+  return undefined;
+  } 
+  else  {
+  return x + y
+  };
+}
+
+console.log(addTogether("2",3));
+console.log(addTogether(2,[3]));
+/*Dados 2 argumentos, sumarlos únicamente de ser números.
+Y si el segundo argumento está separado (2)(3) sumarlos igual */
+
+/*Simple:
+function addTogether() {
+  const [first, second] = arguments;
+  if (typeof(first) !== "number")
+    return undefined;
+  if (second === undefined)
+    return (second) => addTogether(first, second);
+  if (typeof(second) !== "number")
+    return undefined;
+  return first + second;
+} */

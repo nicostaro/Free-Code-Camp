@@ -1,0 +1,9 @@
+function checkPositive(arr) {
+  return arr.some(valor=> valor>0) //ver si alguno de los valores cumple
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+
+//puedo poner así o poner let x = arr............ y 
+//después poner return x
+

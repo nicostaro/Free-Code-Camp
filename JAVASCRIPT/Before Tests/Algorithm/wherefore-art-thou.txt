@@ -1,0 +1,15 @@
+function whatIsInAName(collection, source) {
+  let a = Object.keys(source); // aca obtengo los parámetros del objeto source y me los devuelve en un array.
+    
+  let arr = collection.filter(item => a.every(key=>item.hasOwnProperty(key) && source[key] === item[key]))
+ // acá digo que me filtre cada objeto dentro de collection (que sería "item") tal que todas las propiedades de a estén en el item y además que la propiedad del item sea igual a la propiedad de a.     
+    
+    return arr;
+}
+
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { first: "Mercutio", last: "Capulet" }));
+
+
+
+
+

@@ -1,0 +1,30 @@
+function translatePigLatin(str) {
+let separadas = str.replace(/^([^a,e,i,o,u]+)([a,e,i,o,u])/i, "$1 $2").split(" ");
+// hasta acá lo que hice fue decir, separame la palabra si empieza con una o más letras que no sean vocales de las vocales. Indistinto si es mayúsucla o minúscula. y Después creame un array con items igual a las separaciones. Si la palabra empieza con vocal, no va a haber sepracaión por lo que el array va a tener un solo item. Si empieza con consonantes/s va a tener 2 items.
+if (separadas.length==1 && separadas[0][0].match(/([a,e,i,o,u])/i)){
+  separadas = separadas.join()+"way"
+} 
+// aca digo que si el length es 1 (puede ser que empiece con vocal o que todas las letras sean consonantes), y además empieza con vocal, agregale el "way"
+else if (separadas.length==1){
+  separadas = separadas.join()+"ay"
+} // aca ese el caso en que TODAS las letras sean consonantes
+
+else  { 
+  separadas = separadas[1]+separadas[0]+"ay"
+} // ultimo caso que empieza con consonantes/s
+
+  return separadas;
+}
+
+console.log(translatePigLatin("consonant"));
+
+
+/*
+^([^a,e,i,o,u]+)([a,e,i,o,u])/ig
+exp 1)  ^ significa empieza con
+exp 2) [^a,e,i,o,u] no es vocal
+exp 3) + significa 1 o más, en este caso "no vocales"
+exp 4) [a,e,i,o,u] vocales
+exp 5) /i  La i es para mayúscula o minúscula
+
+*/
