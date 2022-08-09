@@ -1,0 +1,23 @@
+const frontEndFrameworks = [
+  'React',
+  'Angular',
+  'Ember',
+  'Knockout',
+  'Backbone',
+  'Vue'
+];
+//Se hace una lista ordenada de los elementos del array
+// Y se agrega un "key" para cada elemento de la lista, que podía ser cualquiera mientras uno fuera diferente de otro. Para hacerlo más lógico, le dejé como la posición de cada palabra dentro del array
+function Frameworks() {
+  const renderFrameworks = frontEndFrameworks.map(x=>
+  <li key={frontEndFrameworks.indexOf(x)}>{x}
+  </li>)
+  return (
+    <div>
+      <h1>Popular Front End JavaScript Frameworks</h1>
+      <ul>
+        {renderFrameworks}
+      </ul>
+    </div>
+  );
+};

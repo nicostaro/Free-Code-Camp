@@ -1,0 +1,27 @@
+const ADD = 'ADD';
+
+const reducer = (state = 0, action) => {
+  switch(action.type) {
+    case ADD:
+      return state + 1;
+    default:
+      return state;
+  }
+};
+
+const store = Redux.createStore(reducer);
+
+// Global count variable:
+let count = 0;
+
+function callback(){
+   count = count+1
+} //función que le suma 1 a count
+
+store.subscribe(callback) //store.subscribe se activa cada vez que se realiza una función (en este caso store.dispatch). Y cada vez que se activa, se activa la función "callback" que le suma 1 a count
+store.dispatch({type: ADD});
+console.log(count);
+store.dispatch({type: ADD});
+console.log(count);
+store.dispatch({type: ADD});
+console.log(count);

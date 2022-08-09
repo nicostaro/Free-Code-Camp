@@ -1,0 +1,23 @@
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: true
+    }
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+  toggleDisplay() {
+    this.setState(state => ({
+      display: !state.display
+    }));
+  }
+  render() {
+    return (
+       <div>
+         <button onClick={this.toggleDisplay}>Toggle Display</button>
+         {this.state.display && <h1>Displayed!</h1>} 
+         {/*esto es un if "escondido", se lee de esta manera: if (this.state.display) return lo que esté después de &&, de no ser true, no return eso que viene despues del && */}
+       </div>
+    );
+  }
+};

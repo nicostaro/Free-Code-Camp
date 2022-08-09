@@ -1,0 +1,23 @@
+// Define ADD, addMessage(), messageReducer(), and store here:
+const ADD = "ADD";
+
+const addMessage = (message) => { //acción creadora (retorna una acción)
+  return {
+    type: ADD,
+    message // acción. mismo que poner message: message
+  }
+};
+
+const messageReducer = (state=[],action) =>{
+  switch (action.type){
+    case ADD:
+    return [...state,action.message];
+  // uno pondría el messageReducer(addMessage(123)) y entonces addMessage es el "action", 123 va a ser el message.
+  //y lo que creo es que state pasa a ser [123], si repetís lo mismo pero con 111, stata pasa a ser [123,111]
+    default:
+    return state;
+  }
+};
+
+const store = Redux.createStore(messageReducer);
+

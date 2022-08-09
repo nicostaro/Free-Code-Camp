@@ -1,0 +1,13 @@
+const store = Redux.createStore(
+  (state = {login: false}) => state
+);
+
+const loginAction = () => { //acción creadora (retorna una acción)
+  return {
+    type: 'LOGIN'  // acción
+  }
+};
+
+// Dispatch the action here:
+
+store.dispatch(loginAction()); //envía la acción

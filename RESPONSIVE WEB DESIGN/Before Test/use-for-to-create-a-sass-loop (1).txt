@@ -1,0 +1,13 @@
+<style type='text/scss'>
+  @for $i from 1 to 6 {
+    .text-#{$i} {font-size:$i*15}
+  }
+// las variables acá empiezan con "$". from 1 to 6 no incluye el 6, para incluirlo poner "through" en vez de "to".
+
+</style>
+
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>

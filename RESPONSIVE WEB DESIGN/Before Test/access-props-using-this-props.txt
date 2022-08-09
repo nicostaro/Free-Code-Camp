@@ -1,0 +1,31 @@
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+        <div>
+            
+            <Welcome name={"Kevin"}/>
+           
+        </div>
+    );
+  }
+};
+
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+        <div>
+          { /* Como es una clase y no una const, se le agrega el "this." antes de props */ }
+          <p>Hello, <strong>{this.props.name}</strong>!</p>
+          
+        </div>
+    );
+  }
+};

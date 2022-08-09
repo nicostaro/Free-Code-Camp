@@ -1,0 +1,14 @@
+const addMessage = (message) => { //action creator
+  return {
+    type: 'ADD',
+    message: message
+  }
+};
+
+const mapDispatchToProps = (dispatch) =>{
+  return {
+    submitNewMessage: (message) => dispatch (addMessage(message))
+  }
+}
+
+//función con parámetro dispatch que crea un objeto con la propiedad sumbitNwe Message, que envía una función, en este caso addMessage 
