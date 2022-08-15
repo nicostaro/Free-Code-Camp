@@ -4,17 +4,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="quote-machine.css"> 
-     
+    <script src="https://kit.fontawesome.com/0df3025001.js" crossorigin="anonymous"></script> <!--con esto puedo usar iconos, cuando los pongo en class--> 
     <title>Quote-Machine</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-
-<body id="abc">
-   <div id="quote-box" class="container-fluid" >
-    <div id="text">Aca va el dicho</div>
-    <div id="author">Autor</div>
-    <button id="new-quote">Nuevo Dicho</button>
-    <a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank">Dejamelo en twitter</a>
+<!-- clases container, row y col son de bootstrap5 -->
+<body id="body">
+    <div id="quote-box" class="container" >
+        <div id="text" class="row"></div>
+        <div id="author" class="row"></div><br>
+        <div class="row row-cols-6"> <!-- para que se divida en 6 columnas -->
+            
+            <a id="tweet-quote" class="col" target="_blank">Share on twitter<i class="fa-solid fa-dove"></i></a> 
+            <!-- no le pongo href al elemento "a" porque lo cambio en el archivo js -->
+            <button id="new-quote" class="col">New Quote</button>
+        
+        </div>
    </div>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   <!--para usar jquery-->
     <script type="text/javascript" src="quote-machine.js"></script>  
