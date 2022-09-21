@@ -95,9 +95,6 @@ function Maquina ({x, volumen, setGrabar}) {
   )
 };
 
-
- 
-
 function App() {
   const [volumen, setVolumen] = React.useState(1); //esta es una función típica de React de state (volumen) y setState(setVolumen), lo puse el stado inicial "50"
   const [grabar, setGrabar] = React.useState ("");

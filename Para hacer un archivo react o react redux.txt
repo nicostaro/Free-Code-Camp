@@ -1,0 +1,19 @@
+Simbolo del sistema
+
+cd C:sadsadsadsd    La ruta donde quier crear la carpeta
+
+npx create-react-app "nombre-sin-mayuscula y sin las comillas"
+
+Termina de instalarse y tocas
+
+code .    y ahí se abré en Vcode (o lo abrís manual)
+
+Hasta acá instalé React
+
+
+después 
+npm add redux react-redux  (son 2 librerías)
+
+vuelvo a VScode
+entro en src y creo "store.js"
+
