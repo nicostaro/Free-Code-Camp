@@ -1,3 +1,99 @@
-body{
-    text-align: center;
+#container{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "display display display display display"
+    "output output output output output"
+    "one two three add clear"
+    "four five six subtract clear"
+    "seven eight nine multiply clear"
+    "zero decimal equals divide clear"
+    ;
+    
+}
+
+.grid .display{
+    grid-area: display;
+}
+.grid .output{
+    grid-area: output;
+}
+.grid .one{
+    grid-area: one;
+}
+.grid .two{
+    grid-area: two;
+}
+.grid .three{
+    grid-area: three;
+}
+.grid .four{
+    grid-area: four;
+}
+.grid .five{
+    grid-area: five;
+}
+.grid .six{
+    grid-area: six;
+}
+.grid .seven{
+    grid-area: seven;
+}
+.grid .eight{
+    grid-area: eight;
+}
+.grid .nine{
+    grid-area: nine;
+}
+.grid .add{
+    grid-area: add;
+}
+.grid .subtract{
+    grid-area: subtract;
+}
+.grid .multiply{
+    grid-area: multiply;
+}
+.grid .divide{
+    grid-area: divide;
+}
+.grid .zero{
+    grid-area: zero;
+}
+.grid .clear{
+    grid-area: clear;
+}
+.grid .decimal{
+    grid-area: decimal;
+}
+
+
+
+
+
+
+button{
+    border-color: gray;
+  
+}
+
+#display{
+    border: 2px solid gray;
+    border-color: gray;
+    
+}
+
+#output{
+    border: 2px solid gray;
+    border-color: gray;
+   
 }

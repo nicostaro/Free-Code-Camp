@@ -104,28 +104,31 @@ function App() {
 
 
   return (
-    <div id="flex-container">
-      <button id="equals" className="flex-item" onClick={equals}>=</button>
-      <button id="zero" className="flex-item" onClick={()=> showKey("0")}>0</button>
-      <button id="one" className="flex-item" onClick={()=> showKey("1")}>1</button>
-      <button id="two" className="flex-item" onClick={()=> showKey("2")}>2</button>
-      <button id="three" className="flex-item" onClick={()=> showKey("3")}>3</button>
-      <button id="four" className="flex-item" onClick={()=> showKey("4")}>4</button>
-      <button id="five" className="flex-item" onClick={()=> showKey("5")}>5</button>
-      <button id="six" className="flex-item" onClick={()=> showKey("6")}>6</button>
-      <button id="seven" className="flex-item" onClick={()=> showKey("7")}>7</button>
-      <button id="eight" className="flex-item" onClick={()=> showKey("8")}>8</button>
-      <button id="nine" className="flex-item" onClick={()=> showKey("9")}>9</button>
-      <button id="add" className="flex-item" onClick={()=> showKey("+")}>+</button>
-      <button id="subtract" className="flex-item" onClick={()=> showKey("-")}>-</button>
-      <button id="multiply" className="flex-item" onClick={()=> showKey("*")}>*</button>
-      <button id="divide" className="flex-item" onClick={()=> showKey("/")}>/</button>
-      <button id="decimal" className="flex-item" onClick={()=> showKey(".")}>.</button>
-      <button id="clear" className="flex-item" onClick={clear}>AC</button>
-      <div id="display" className="flex-item">{display}</div>    
-      <div id="output" className="flex-item">{output}</div>    
+    <div id="container">
+      
+      <div className="grid">
+      
+        <button id="equals" className="equals" onClick={equals}>=</button>
+        <button id="zero" className="zero" onClick={()=> showKey("0")}>0</button>
+        <button id="one" className="one" onClick={()=> showKey("1")}>1</button>
+        <button id="two" className="two" onClick={()=> showKey("2")}>2</button>
+        <button id="three" className="three" onClick={()=> showKey("3")}>3</button>
+        <button id="four" className="four" onClick={()=> showKey("4")}>4</button>
+        <button id="five" className="five" onClick={()=> showKey("5")}>5</button>
+        <button id="six" className="six" onClick={()=> showKey("6")}>6</button>
+        <button id="seven" className="seven" onClick={()=> showKey("7")}>7</button>
+        <button id="eight" className="eight" onClick={()=> showKey("8")}>8</button>
+        <button id="nine" className="nine" onClick={()=> showKey("9")}>9</button>
+        <button id="add" className="add" onClick={()=> showKey("+")}>+</button>
+        <button id="subtract" className="subtract" onClick={()=> showKey("-")}>-</button>
+        <button id="multiply" className="multiply" onClick={()=> showKey("*")}>*</button>
+        <button id="divide" className="divide" onClick={()=> showKey("/")}>/</button>
+        <button id="decimal" className="decimal" onClick={()=> showKey(".")}>.</button>
+        <button id="clear" className="clear" onClick={clear}>AC</button>
+        <div id="display" className="display">{display}</div>    
+        <div id="output" className="output">{output}</div>    
     
-    
+      </div>
     </div>
   
   );

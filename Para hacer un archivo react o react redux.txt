@@ -17,3 +17,27 @@ npm add redux react-redux  (son 2 librerías)
 vuelvo a VScode
 entro en src y creo "store.js"
 
+
+SIN CREAR LA CARPETA CON ESTO
+
+creas un index.html   pones "!" + enter y te aparece todo sólo
+https://reactjs.org/docs/cdn-links.html - copias los primeros dos links entre meta y title
+
+https://babeljs.io/docs/en/babel-standalone - en "script tags" copiar un script similar a este
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+Babel te transforma para navegadores que no usen la nueva ECMA, para que lo puedan leer
+
+en body poner
+ <div id="root"></div>
+ <script type="text/babel" src="./index.js"></script>
+
+crear un index.js
+function App () {
+    return <div>Hello</div>
+}
+
+
+ReactDOM.render(<App/>, document.getElementById("root"))
+
+

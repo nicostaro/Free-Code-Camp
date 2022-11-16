@@ -1,0 +1,27 @@
+body {
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    
+} 
+
+#container {
+    font-size: larger;
+}
+
+#container-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    justify-items: center;
+    margin-top: 20px;
+    
+}
+
+.container-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin:auto;
+    justify-items: center;
+    align-items: center;
+    
+}

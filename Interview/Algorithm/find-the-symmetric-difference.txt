@@ -1,0 +1,31 @@
+const unique = (arr1, arr2) =>
+  [...arr1.filter (x => !arr2.includes(x)),
+   ...arr2.filter (x => !arr1.includes(x))];
+  
+// Con esto digo haceme un array
+// que tenga  los terminos de la primera que no estén en la segunda y los termino de la segunda que no estén en la primera
+
+//Ahora tengo que hacer que se haga con arrays infinitas y no sólo 2. Uso Reduce.
+//Reduce lo que hace es usar una función con los primeros dos, y el resultados lo hace con el tercero, y el resultado, con el cuarto, y así
+//Pero para hacer eso, necesito que los los arrays, estén dentro de un array mayor, para hacer arr.reduce
+
+const sym = (...args) => {
+  let newArr = [...args];
+  let almost = newArr.reduce (unique);
+  //hasta acá estoy bien, pero me falta sacar los números repetidos de un mismo array. Así que, o lo hago al principio o lo hago ahora al final, eliminando los 
+  //repetidos de almost
+  let answer = [];
+  for (let i=0;i<almost.length;i++){
+    if (!answer.includes(almost[i])){
+      answer.push (almost[i])
+    }
+  }
+    
+  
+  return answer};
+
+
+
+
+console.log(sym ([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]))
+
